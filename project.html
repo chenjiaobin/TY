@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>天元项目</title>
+	<link rel="stylesheet" type="text/css" href="css/project.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+</head>
+<body class="dashboardPage">
+	<!-- 顶部导航 -->
+	<header>
+		<div class="chen-header clearFix">
+			<div class="nav-l">
+				<a href="/" class="logo"><img src="img/logo.png" title="天元"></a>
+			</div>
+			<div class="nav-r">
+				<ul>
+					<li>
+						<form action="/" method="post">
+							<div class="form-group has-feedback">
+								<label for="search-info" class="sr-only">search</label>
+								<input type="text" name="search-info" id="search-info" class="search-info form-control" placeholder="Search...">
+								<span class="iconfont icon-sousuo form-control-feedback"></span>
+							</div>
+						</form>
+					</li>
+					<li>
+						 <button class="btn create-btn" data-toggle='modal' data-target="#create-issue">
+						 	<span class="iconfont icon-tianjiajiahaowubiankuang"></span>
+						 	快速创建
+						 </button>
+						 
+					</li>
+					<li>
+						<span class="iconfont icon-tongzhi message-btn" title="消息">
+							<i class="circle"></i>
+						</span>
+					</li>
+					<li>
+						<span class="iconfont icon-shezhi1 setting-btn" title="设置"></span>
+					</li>
+					<li>
+						<a href="/" class="user-img">
+							<img src="img/user-img.png" title="头像" width="33" height="33">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- 左侧导航 -->
+	<div class="menu">
+		<nav>
+			<ul>
+				<li>
+					<a href="/">
+						<span class="iconfont icon-xiangmu"></span><br>
+						项目
+					</a>
+				</li>
+				<li>
+					<a href="/">
+						<span class="iconfont icon-renwu"></span><br>
+						任务
+					</a>
+				</li>
+				<li>
+					<a href="/">
+						<span class="iconfont icon-sousuo"></span><br>
+						搜索
+					</a>
+				</li>
+				<li>
+					<a href="/">
+						<span class="iconfont icon-cf-c02"></span><br>
+						用户
+					</a>
+				</li>
+				<li>
+					<a href="/">
+						<span class="iconfont icon-shezhi1"></span><br>
+						设置
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<!-- 主体内容 -->
+	<section class="content">
+		<div class="tragger projectTragger clearFix">
+			<div class="tragger-r">
+				<aside class="action">
+					<h1>动态</h1>
+					<div class="action-info">
+						<div class="item">
+							<a href="#" class="jpg"><img src="img/user-img.png"></a>
+							<div class="item-info">
+								<p class="mes">
+									<a href="#">admin</a>将<a href="#">YFRW-178-解决页面多个ajax同时请求的问题</a>的状态更新为完成， 解决结果更新为 '完成'
+								</p>
+								<p class="time">
+									<img src="img/action-logo.png" title="问题图标">
+									<span>昨天6:12下午</span>
+								</p>
+							</div>
+						</div>
+						<div class="item">
+							<a href="#"><img src="img/user-img.png"></a>
+							<div class="item-info">
+								<p class="mes">
+									<a href="#">admin</a>将<a href="#">YFRW-178-解决页面多个ajax同时请求的问题</a>的状态更新为完成， 解决结果更新为 '完成'
+								</p>
+								<p class="time">
+									<img src="img/action-logo.png" title="问题图标">
+									<span>昨天6:12下午</span>
+								</p>
+							</div>
+						</div>		
+					</div>
+					<button class="load-more">加载更多...</button>
+				</aside>
+			</div>
+			<div class="tragger-l">
+				<article class="top">
+					<h1>我的项目<span class="iconfont icon-yuandian-copy more"></span></h1>
+					<div class="my-project">
+						<ul>
+							<li>
+								<a href="#"><img src="img/project-logo.png"></a>
+								<p class="text">测试项目</p>
+							</li>
+							<li>
+								<a href="#" class="create-project" data-toggle='modal' data-target='#create-project'>
+									<span class="iconfont icon-tianjiajiahaowubiankuang"></span>
+								</a>
+								<p class="text">创建项目</p>
+							</li>
+						</ul>
+					</div>
+				</article>
+				<article class="down">
+					<h1>我处理中的任务</h1>
+					<div class="my-task">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>类型</th>
+									<th>ID</th>
+									<th>标题</th>
+									<th>优先级</th>
+									<th>状态</th>
+									<th>模块</th>
+									<th>版本</th>
+									<th>迭代</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<span class="iconfont icon-biaoqian1 min-pic epic"><i class="text">E</i></span>
+									</td>
+									<td>Test</td>
+									<td>前端</td>
+									<td>高</td>
+									<td>进行中</td>
+									<td>安全</td>
+									<td>v1.0</td>
+									<td>迭代1</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="iconfont icon-biaoqian1 min-pic story"><i class="text">S</i></span>
+									</td>
+									<td>Test</td>
+									<td>前端</td>
+									<td>高</td>
+									<td>进行中</td>
+									<td>安全</td>
+									<td>v1.0</td>
+									<td>迭代1</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="iconfont icon-biaoqian1 min-pic task"><i class="text">T</i></span>
+									</td>
+									<td>Test</td>
+									<td>前端</td>
+									<td>高</td>
+									<td>进行中</td>
+									<td>安全</td>
+									<td>v1.0</td>
+									<td>迭代1</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="iconfont icon-biaoqian1 min-pic epic"><i class="text">E</i></span>
+									</td>
+									<td>Test</td>
+									<td>前端</td>
+									<td>高</td>
+									<td>进行中</td>
+									<td>安全</td>
+									<td>v1.0</td>
+									<td>迭代1</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="iconfont icon-biaoqian1 min-pic story"><i class="text">B</i></span>
+									</td>
+									<td>Test</td>
+									<td>前端</td>
+									<td>高</td>
+									<td>进行中</td>
+									<td>安全</td>
+									<td>v1.0</td>
+									<td>迭代1</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="iconfont icon-biaoqian1 min-pic sub-task"><i class="text">Z</i></span>
+									</td>
+									<td>Test</td>
+									<td>前端dfasdjfkjasjfaslfdjlasjlkfk</td>
+									<td>高</td>
+									<td>进行中</td>
+									<td>安全</td>
+									<td>v1.0</td>
+									<td>迭代1</td>
+								</tr>
+							</tbody>
+						</table>
+						<nav class="page">
+							<ul class="pagination">
+								<li>
+									<a href="#"><span>&laquo;</span></a>
+								</li>
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li>
+									<a href="#"><span>&raquo;</span></a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+	<!-- 创建问题弹框 -->
+	<div class="modal fade issue-modal" id="create-issue">
+	 	<div class="modal-dialog modal-lg">
+	 		<div class="modal-content">
+	 			<div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">新建任务</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form class="form-horizontal" action="#" method="post">
+	        	<ul class="clearFix">
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='projectOwn' class="col-sm-3 control-label">所属项目<span class="min-pic">*</span></label>
+	        				<div class="col-sm-9">
+	        					<select class="form-control">
+	        						<option value="IOS11.1系统修改项目">IOS11.1系统修改项目</option>
+	        						<option value="IOS11.1系统修改项目">IOS11.1系统修改项目</option>
+	        						<option value="IOS11.1系统修改项目">IOS11.1系统修改项目</option>
+	        					</select>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issueType' class="col-sm-3 control-label">问题类型<span class="min-pic">*</span></label>
+	        				<div class="col-sm-9">
+	        					<select class="form-control">
+	        						<option value="Epic">Epic</option>
+	        						<option value="Story">Story</option>
+	        						<option value="task">task</option>
+	        					</select>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="aloneInline">
+	        			<div class="form-group clearFix">
+	        				<label for='issueTitle' class="control-label">标题<span class="min-pic">*</span></label>
+	        				<div class="sr">
+	        					<input type="text" name="issueTitle" id="issueTitle" class="form-control issueTitle" placeholder="输入标题">
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="aloneInline">
+	        			<div class="form-group clearFix">
+	        				<label for="issueDescript" class="control-label">问题描述</label>
+	        				<div class="sr">
+	        					<textarea class="form-control issueDescript" id="issueDescript" rows="7"></textarea>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issuePriority' class="col-sm-3 control-label">优先级</label>
+	        				<div class="col-sm-9">
+	        					<select class="form-control">
+	        						<option value="high">高</option>
+	        						<option value="middle">中</option>
+	        						<option value="low">低</option>
+	        					</select>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issueManage' class="col-sm-3 control-label">处理人</label>
+	        				<div class="col-sm-9">
+	        					<select class="form-control">
+	        						<option value="admin">admin</option>
+	        						<option value="chen">陈</option>
+	        						<option value="zhang">张</option>
+	        					</select>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issueEstimateTime' class="col-sm-3 control-label">预估完成时间</label>
+	        				<div class="col-sm-5">
+	        					<input type="text" name="time" id="issueEstimateTime" class="form-control issueEstimateTime">
+	        				</div>
+	        				<div class="col-sm-4 example">(例如:3w/1d/8h)</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issueTimeOver' class="col-sm-3 control-label">到期日</label>
+	        				<div class="col-sm-5">
+	        					<input type="text" name="time" id="issueTimeOver" class="form-control issueTimeOver">
+	        				</div>
+	        				<div class="col-sm-4 example">(例如:3w/1d/8h)</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issueVersion' class="col-sm-3 control-label">所属版本</label>
+	        				<div class="col-sm-9">
+	        					<select class="form-control">
+	        						<option value="v1.0">v1.0</option>
+	        						<option value="v1.1">v1.1</option>
+	        						<option value="v1.2">v1.2</option>
+	        					</select>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issueIteration' class="col-sm-3 control-label">所属迭代</label>
+	        				<div class="col-sm-9">
+	        					<select class="form-control">
+	        						<option value="迭代1">迭代1</option>
+	        						<option value="迭代2">迭代2</option>
+	        						<option value="迭代3">迭代3</option>
+	        					</select>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issueEpic' class="col-sm-3 control-label">所属Epic</label>
+	        				<div class="col-sm-9">
+	        					<select class="form-control">
+	        						<option value="Epic-1">Epic-1</option>
+	        						<option value="Epic-2">Epic-2</option>
+	        						<option value="Epic-3">Epic-3</option>
+	        					</select>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issueLinkTask' class="col-sm-3 control-label">关联任务</label>
+	        				<div class="col-sm-9">
+	        					<select class="form-control">
+	        						<option value="任务1">任务1</option>
+	        						<option value="任务2">任务2</option>
+	        						<option value="任务3">任务3</option>
+	        					</select>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="aloneInline">
+	        			<div class="form-group clearFix">
+	        				<label for='uploadFile' class="control-label">添加附件</label>
+	        				<div class="sr">
+	        					<div class="uploadFile">
+	        						<label for="uploadFile">上传附件<span class="iconfont icon-tianjiafujian"></span></label>
+	        						<input type="file" name="uploadFile" id="uploadFile">
+	        					</div>
+	        				</div>
+	        			</div>
+	        		</li>
+	        	</ul>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	      	<div class="checkbox">
+	      		<label>
+	      			<input type="checkbox" name="create-more">创建另一个
+	      		</label>
+	      	</div>
+	        <button type="button" class="btn btn-primary">新建</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	      </div>
+	 		</div>
+	 	</div>
+	 </div>
+	 <!-- 创建项目弹框 -->
+	 <div class="modal fade project-modal" id="create-project">
+	 	<div class="modal-dialog">
+	 		<div class="modal-content">
+	 			<div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">新建项目</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form  class="form-horizontal" action="#" method="post">
+	        	<div class="form-group">
+	        		<label for="projectName" class="col-sm-2 control-label">
+	        		项目名称
+							<span class="min-pic">*</span>
+	        		</label>
+	        		<div class="col-sm-10">
+	        			<input type="text" name="projectName" id="projectName" class="form-control projectName" placeholder="输入项目名称">
+	        			<span id="helpBlock" class="help-block">最大支持80个字符</span>
+	        		</div>
+	        	</div>
+	        	<div class="form-group">
+	        		<label for="idCard" class="col-sm-2 control-label">ID</label>
+	        		<div class="col-sm-10">
+	        			<input type="text" name="idCard" id="idCard" class="form-control idCard">
+	        			<span id="helpBlock" class="help-block">最大支持10个字符</span>
+	        		</div>
+	        	</div>
+	        	<div class="form-group">
+	        		<label for="projectLeader sr-only" class="col-sm-2 control-label">项目负责人</label>
+	        		<div class="col-sm-10">
+	        			<select class="form-control">
+	        				<option value="张">张</option>
+	        				<option value="鲁">鲁</option>
+	        				<option value="西">西</option>
+	        			</select>
+	        		</div>
+	        	</div>
+	        	<div class="form-group">
+	        		<label for="projectType sr-only" class="col-sm-2 control-label">项目类别</label>
+	        		<div class="col-sm-10">
+	        			<select class="form-control">
+	        				<option value="产品类">产品类</option>
+	        				<option value="业务类">业务类</option>
+	        				<option value="未知类">未知类</option>
+	        			</select>
+	        		</div>
+	        	</div>
+	        	<div class="form-group">
+	        		<label for="projectDescript sr-only" class="col-sm-2 control-label">项目类别</label>
+	        		<div class="col-sm-10">
+	        			<textarea class="form-control" rows="5"></textarea>
+	        		</div>
+	        	</div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary">新建</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	      </div>
+	 		</div>
+	 	</div>
+	 </div>
+	<script type="text/javascript" src='http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
+	<script type="text/javascript" src='js/bootstrap.js'></script>
+</body>
+</html>

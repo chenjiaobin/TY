@@ -1,0 +1,651 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-size:14px;
+	font-family: "Microsoft YaHei","微软雅黑","Lantinghei SC","Open Sans";	
+}
+html,body{
+	min-width: 1100px;
+	width: 100%;
+	height: 100%; 
+}
+body{
+	background:#f3f3f3!important;
+}
+.dashboardPage{
+	padding-top: 60px;
+	padding-left: 72px;
+}
+.single-dashboardPage,
+.count-dashboardPage{
+	padding-top: 60px;
+	padding-left: 85px;
+}
+.table thead th{
+	border-width: 1px!important;
+	cursor: pointer;
+}
+/*清除浮动影响*/
+.clearFix:after{
+	content:'';
+	display: block;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+.clearFix{
+	zoom:1;
+}
+/*-----------项目首页样式project.vm--------------*/
+.chen-header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	border-bottom:1px solid #c1c1c1;
+	background: #fff; 
+	z-index: 10;
+}
+.chen-header .nav-l{
+	float: left;
+	margin-left: 70px;
+}
+.nav-l .logo{
+	display: inline-block;
+}
+.chen-header .nav-r{
+	float: right;
+	padding: 12px 0;
+}
+.nav-r li{
+	display: inline-block;
+
+}
+.nav-r form{
+	width: 150px;
+	height: 33px;
+}
+.nav-r form .search-info{
+	width: 150px;
+	height: 33px;
+}
+.nav-r ul{
+	margin: 0;
+	padding: 0;
+	font-size:0;
+}
+.nav-r li{
+	margin-right: 20px;
+}
+.nav-r li:last-child{
+	margin-right: 10px;
+}
+.nav-r .create-btn{
+	width: 108px;
+	height: 38px;
+	background: #1d97d6;
+	font-size:16px;
+	color: #fff;
+	outline: none;
+}
+.nav-r .create-btn:focus{
+	color:#fff;
+}
+.nav-r .create-btn:hover{
+	background: #1779ab;
+	color: #fff;
+}
+.nav-r .message-btn{
+	position: relative;
+	font-size: 25px;
+	vertical-align: middle;
+}
+.nav-r .message-btn:hover{
+	color: #00aaff;
+}
+.nav-r .message-btn .circle{
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: red;
+}
+.nav-r .setting-btn{
+	display: inline-block;
+	font-size: 25px;
+	vertical-align: middle;
+	color: #333;
+}
+.nav-r .setting-btn:hover{
+	color: #00aaff;
+}
+.nav-r .user-img{
+	display: inline-block;
+}
+.menu{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 72px;
+	height: 100%;
+	background: #151515;
+	z-index: 8;
+	padding-top: 70px;
+}
+.menu ul a{
+	display: inline-block;
+	width: 72px;
+	height: 77px;
+	text-align: center;
+	font-size: 14px;
+	padding: 12px;
+	color: #fff;
+}
+.menu ul .active,.single-menu ul .active{
+	background: rgba(154,154,154,0.4);
+}
+.menu ul a:hover,.single-menu ul a:hover{
+	background: rgba(154,154,154,0.4);
+	text-decoration: none;
+}
+.menu ul a span,.single-menu ul a span{
+	font-size: 20px;
+}
+.projectTragger{
+		padding: 20px;
+}
+.tragger{
+	z-index: 6;
+	background: #f3f3f3;
+	/*overflow-y: auto;*/
+}
+.tragger .tragger-l{
+	margin-right: 297px;
+}
+.tragger-l .top,.tragger-l .down,.tragger .tragger-r{
+	border:1px solid #d6d6d6;
+	border-radius: 3px;
+	background: #fff;
+}
+.tragger-l .top .more{
+	display: inline-block;
+	float: right;
+	font-size: 12px;
+	vertical-align: middle;
+	margin-top: 3px;
+}
+.tragger-l .top h1,.tragger-l .down h1,.tragger .tragger-r h1{
+	margin: 0;
+	padding:16px 23px;
+	font-size: 18px;
+	color:#212121;
+	border-bottom: 1px solid #d6d6d6;
+}
+.tragger-l .top .my-project{
+	padding:40px 30px 20px 30px;
+}
+.top .my-project ul{
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+}
+.top .my-project li{
+	display: inline-block;
+	text-decoration: none;
+	margin-right: 40px;
+}
+.top .my-project li p{
+	text-align: center;
+	margin-top: 14px;
+	margin-bottom: 0;
+	font-size: 16px;
+}
+.top .my-project li a{
+	display: inline-block;
+	width: 134px;
+	height: 137px;
+	border: 1px solid #bfbfbf;
+	text-align: center;
+}
+.top .my-project li a:hover{
+	text-decoration: none;
+	color: #000;
+}
+.top .my-project .create-project{
+	border: 1px #c8c8c8 dashed;
+	outline: none;
+}
+.top .my-project .create-project:focus{
+	text-decoration: none;
+}
+.top .my-project .create-project span{
+	text-align: center;
+	line-height: 137px;
+	font-size: 30px;
+	color: #c8c8c8;
+}
+.top .my-project .create-project span:hover{
+	color: #333;
+}
+.tragger-l .down{
+	margin-top: 20px;
+}
+.tragger-l .down .my-task{
+	padding: 25px 30px 40px 30px;
+}
+.down .my-task th:first-child{
+	text-align: center;
+}
+.down .my-task tr td:first-child{
+	text-align: center;
+}
+.down .my-task .min-pic,
+.taskTragger .taskList .min-pic,
+.projectList .list .min-pic,
+.allIssue .issueList .min-pic{
+	position: relative;
+	font-size: 20px;
+}
+.down .my-task .epic,
+.taskTragger .taskList .epic,
+.projectList .list .epic,
+.allIssue .issueList .epic{
+	color:#a41ec1;
+}
+.down .my-task .story,
+.taskTragger .taskList .story,
+.projectList .list .story,
+.allIssue .issueList .story{
+	color: #3ebf1c;
+}
+.down .my-task .task,
+.taskTragger .taskList .task,
+.projectList .list .task,
+.allIssue .issueList .task{
+	color: #31b2dc;
+}
+.down .my-task .sub-task,
+.taskTragger .taskList .sub-task,
+.projectList .list .sub-task,
+.allIssue .issueList .sub-task{
+	color: #31b2dc;
+}
+.down .my-task .min-pic .text,
+.taskTragger .taskList .min-pic .text,
+.projectList .list .min-pic .text,
+.allIssue .issueList .min-pic .text{
+	position: absolute;
+	top: 1px;
+	left: 6px;
+	color: #fff;
+	font-size: 12px;
+	font-style: normal;
+}
+
+.down .my-task .page{
+	text-align: center;
+}
+.down .my-task .page ul{
+	margin: 0;
+	padding: 0;
+}
+.tragger .tragger-r{
+	width: 278px;
+	float: right;
+	padding-bottom: 20px;
+}
+.tragger-r .action .action-info{
+	padding: 0 10px 20px 5px;
+}
+.tragger-r .action .item{
+	border-bottom: 1px solid #d9d9d9;
+	padding-top: 20px;
+	position: relative;
+}
+.tragger-r .action .item:last-child{
+	border:none;
+}
+.tragger-r .action .item  .jpg{
+	/*float:left;*/
+	margin-right: 14px;
+	display: block;
+	position: absolute;
+	top: 20px;
+	left: 10px;
+}
+.tragger-r .action .item .item-info{
+	/*display: table-cell;*/
+	/**display: inline-block;*/
+	margin-left: 50px;
+}
+.action .item .item-info .time{
+	font-size: 12px;
+	color:#616161;
+}
+.item-info .time span{
+	vertical-align: middle;
+	margin-left: 14px;
+}
+.tragger-r .action .load-more{
+	width: 240px;
+	height: 40px;
+	border-radius: 4px;
+	background:#FCFCFC;
+	border:1px solid #E3E9ED;
+	margin:0 19px;
+	outline: none;
+}
+.tragger-r .action .load-more:hover{
+	background:#F5F6F8;
+}
+/*创建项目样式*/
+.project-modal .modal-dialog,.issue-modal .modal-dialog{
+	margin-top: 60px;
+}
+.project-modal .min-pic,.issue-modal .min-pic{
+	color:red;
+}
+.project-modal label,.issue-modal label{
+	padding-right: 0;
+	font-size: 14px;
+	font-weight:normal;
+	color: #909090
+}
+.project-modal .modal-body{
+	padding:25px 70px 15px 25px;
+}
+.project-modal textarea,.issue-modal textarea{
+	resize: none;
+}
+/*创建问题样式*/
+.issue-modal .checkbox{
+	display: inline-block;
+	margin-right: 10px;
+	color: #6b6b6b;
+}
+.issue-modal .modal-body{
+	padding:25px 70px 15px 25px;
+}
+.issue-modal .modal-body ul{
+	list-style: none;
+}
+.issue-modal  ul .item{
+	width:50%;
+	float: left;
+}
+.issue-modal  ul  .aloneInline label{
+	width: 13%;
+}
+.issue-modal  ul  .aloneInline .sr{
+	width: 87%;
+	padding:0 15px;
+	float: right;
+}
+.issue-modal  .example{
+	margin-top: 6px;
+	padding:0;
+	color: #524e4e;
+}
+.issue-modal .uploadFile{
+	border: 1px dashed #ccc;
+	height: 34px;
+}
+.issue-modal .uploadFile label{
+	display: block;
+	width: 100%!important;
+	height: 34px;
+	text-align: center;
+	line-height: 34px;
+	margin: 0;
+	cursor: pointer;
+}
+.issue-modal .uploadFile label:hover{
+	color: #695d5d;
+}
+.issue-modal .uploadFile label span{
+	margin-left: 10px;
+	padding:5px;
+}
+.issue-modal .uploadFile input{
+	clip: rect(0,0,0,0);
+	display: none;
+}
+
+/*-----------任务页面样式task.vm--------------*/
+.menu-task{
+	position: fixed;
+	left: 72px;
+	top: 0;
+	padding-top:60px; 
+	width: 200px;
+	height: 100%;
+	border-right: 1px solid #c1c1c1;
+	background:#f3f3f3;
+}
+.menu-task nav{
+	height: 100%;
+	overflow: auto;
+}
+.menu-task nav h1{
+	margin: 0;
+	padding: 35px 30px;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.menu-task nav a{
+	display: inline-block;
+	width: 100%;
+	padding: 10px 0 10px 30px;
+	font-size: 15px;
+	color: #666666;
+}
+.menu-task nav a:hover{
+	background: #dddddd;
+	text-decoration: none;
+	color: #333;
+}
+.menu-task nav .min-pic{
+	font-size: 16px;
+	margin-right: 8px;
+}
+.menu-task nav .num{
+	font-style: normal;
+	margin-left: 10px;
+}
+.taskTragger,.clasifyTragger{
+	z-index: -2;
+	padding: 35px 40px 35px 250px;
+}
+.taskTragger h1,.clasifyTragger h1{
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+	padding-bottom: 10px;
+	border-bottom:1px solid #c1c1c1 ;
+}
+.taskTragger .taskList{
+	padding: 0 20px;
+}
+/*-----------分类页面样式classify.vm--------------*/
+.menu-task .item{
+	padding-bottom: 20px;
+	border-bottom: 1px solid #c1c1c1;
+}
+.menu-task .item:last-child{
+	border-bottom: none;
+}
+.menu-project .h-pic{
+	float: right;
+	cursor: pointer;
+}
+.projectList .item h2{
+	font-size: 16px;
+	color: #1382c8;
+	cursor: pointer;
+}
+.projectList .item h2 .min-pic{
+	display: inline-block;
+	margin-left: 5px;
+	vertical-align: middle;
+					transition: all 0.4s ease-in;
+			 -o-transition:all 0.4s ease-in;
+		  -ms-transition:all 0.4s ease-in;
+		 -moz-transition:all 0.4s ease-in;
+	-webkit-transition:all 0.4s ease-in;
+
+}
+.min-pic-active{
+					transform:rotate(-90deg);
+			-ms-transform:rotate(-90deg);
+			 -o-transform:rotate(-90deg);
+		 -moz-transform:rotate(-90deg);
+	-webkit-transform:rotate(-90deg);
+}
+.projectList .together{
+	display: none;
+}
+.projectList .list th:last-child{
+	text-align: center;
+}
+.projectList .list tr td:last-child{
+	text-align: center;
+}
+.projectList .list .edit,.projectList .list .delete{
+	display: inline-block;
+	padding: 0 5px;
+}
+
+/*-----------问题类型页面样式single_project.vm--------------*/
+.single-menu{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 85px;
+	height: 100%;
+	background: #151515;
+	z-index: 8;
+	padding-top: 60px;
+}
+.single-menu .title{
+	display: block;
+	width: 100%;
+	padding: 10px 5px 5px;
+	margin-bottom: 12px;
+	text-align: center;
+	background:#0e2431;
+	text-decoration: none;
+}
+.single-menu .title .user{
+	display: block;
+	margin-top: 2px;
+	font-size: 12px;
+	color: #fff;
+}
+.single-menu .title .time{
+	display: block;
+	margin-top: 2px;
+	font-size: 12px;
+	color: #c8c8c8;
+}
+.single-menu ul a{
+	display: inline-block;
+	width: 85px;
+	height: 60px;
+	text-align: center;
+	font-size: 14px;
+	padding: 8px;
+	color: #fff;
+}
+.single-menu-type{
+	left: 85px!important;
+}
+
+/*-----------所有问题页面样式all_issue.vm--------------*/
+.allIssue .issueList{
+	padding: 0 20px;
+}
+.allTask .taskList .order,
+.allIssue .issueList .order{
+	margin-left: 3px;
+	font-size: 12px;
+}
+.issueList li{
+	display: inline-block;
+	width: 33%;
+}
+.issueList .storyWrap{
+	width: 98%;
+  margin-left: 2%;
+}
+.issueList .subWrap{
+	width: 96%;
+	margin-left: 4%;
+}
+/*-----------统计页面样式count.vm--------------*/
+.countTragger{
+	padding: 20px;
+	height: 100%;
+	overflow: auto;
+}
+.countTragger .tragger-l{
+	height: 100%;
+	padding: 10px;
+	border: 1px solid #d6d6d6;
+	border-radius: 3px;
+	background:#fff;
+}
+.countTragger .tragger-l h1{
+	font-size: 20px;
+	margin:0 0 40px 0;
+}
+.contList .list-l{
+	padding: 0 20px;
+	width: 50%;
+	float: left;
+}
+.contList .list-r{
+	padding: 0 20px;
+	width: 50%;
+	float: right;
+}
+.contList .list-l .rate,
+.contList .list-r .rate{
+	width: 100px;
+	height: 14px;
+	margin-top: 3px;
+	font-size: 0;
+}
+.contList .list-l .rate .percentage,
+.contList .list-r .rate .percentage{
+	display: inline-block;
+	width: 40px;
+	height: 14px;
+	background:#7baaf7;
+	vertical-align: top;
+}
+.contList .list-l .rate .num,
+.contList .list-r .rate .num{
+	display: inline-block;
+	font-size: 12px;
+	height: 14px;
+	line-height: 14px;
+	vertical-align: top;
+	margin-left: 5px;
+}
+.icon{
+	display: inline!important;
+}
+
+.count-dashboardPage .content{
+	/*height: 100%;*/
+	min-height: 100%;
+}
+.hh{
+	display: none;
+}

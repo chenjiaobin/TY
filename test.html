@@ -1,0 +1,225 @@
+<div class="tabpanel-modules">
+    <div class="tabpanel-modules-top">
+        <div class="module" id="fragfilters">
+            <div class="mod-content">
+                <div class="aui-group issue-filter-links">
+                    <div class="aui-item">
+                        <ul class="aui-nav">
+                            <li>
+                                <a class="issue-filter-link" data-type="project" id="filter_all" href="/jira/issues/?jql=project+%3D+DF">All issues</a>
+                            </li>
+                            <li>
+                                <a class="issue-filter-link" data-type="project" id="filter_mostimportant" href="/jira/issues/?jql=project+%3D+DF+AND+resolution+%3D+Unresolved+ORDER+BY+priority+DESC">Unresolved</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="aui-item">
+                        <ul class="aui-nav">
+                            <li>
+                                <a class="issue-filter-link" data-type="project" id="filter_addedrecently" href="/jira/issues/?jql=project+%3D+DF+AND+created%3E%3D-1w+ORDER+BY+created+DESC">Added recently</a>
+                            </li>
+                            <li>
+                                 <a class="issue-filter-link" data-type="project" id="filter_resolvedrecently" href="/jira/issues/?jql=project+%3D+DF+AND+resolutiondate+%3E%3D-1w+ORDER+BY+updated+DESC">Resolved recently</a>
+                             </li>
+                            <li>
+                                <a class="issue-filter-link" data-type="project" id="filter_updatedrecently" href="/jira/issues/?jql=project+%3D+DF+AND+updated%3E%3D-1w+ORDER+BY+updated+DESC">Updated recently</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="aui-item">
+                        <ul class="aui-nav">
+                            <li>
+                                <a class="issue-filter-link" data-type="project" id="filter_assignedtome" href="/jira/issues/?jql=project+%3D+DF+AND+assignee+in+%28currentUser%28%29%29+AND+resolution+%3D+Unresolved">Assigned to me</a>
+                            </li>
+                            <li>
+                                <a class="issue-filter-link" data-type="project" id="filter_reportedbyme" href="/jira/issues/?jql=project+%3D+DF+AND+reporter+in+%28currentUser%28%29%29">Reported by me</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="aui-item">
+                        <ul class="aui-nav">
+                            <li>
+                                 <a class="issue-filter-link" data-type="project" id="filter_unscheduled" href="/jira/issues/?jql=project+%3D+DF+AND+resolution+%3D+Unresolved+AND+fixVersion+is+EMPTY+ORDER+BY+priority+DESC">Unscheduled</a>
+                            </li>
+                            <li>
+                                <a class="issue-filter-link" data-type="project" id="filter_outstanding" href="/jira/issues/?jql=project+%3D+DF+AND+resolution+%3D+Unresolved+ORDER+BY+updated+DESC">Outstanding</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div> 
+    <div class="aui-group tabpanel-modules-split">        
+        <div class="aui-item">
+            <div class="module" id="fragunresolvedissuesbypriority">
+                <div class="mod-header">
+                     <h3>Unresolved: By Priority</h3>
+                </div>
+                <div class="mod-content">
+            <table class="aui">
+                <thead>
+                    <tr>
+                        <th>Priority</th>
+                        <th style="width:15%;">Issues</th>
+                        <th style="width:30%;">Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="name"><img alt="Medium" height="16" src="/jira/images/icons/priorities/medium.svg" title="Medium - Has the potential to affect progress." width="16" /><a href="/jira/issues/?jql=project+%3D+10000+AND+resolution+%3D+Unresolved+AND+priority+%3D+Medium+ORDER+BY+priority+DESC%2C+key+ASC&mode=hide">Medium</a>
+                        </td>
+                        <td class="count">1</td>
+                        <td class="graph last">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="width:100%" class="colour-bar-cont" valign="center">
+                                        <div class="colour-bar"></div>
+                                    </td>
+                                    <td  style="width:0%">&nbsp;&nbsp;&nbsp;100%</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><a id="fragunresolvedissuesbypriority_more" href="/jira/issues/?jql=project+%3D+10000+AND+resolution+%3D+Unresolved+ORDER+BY+priority+DESC%2C+priority+DESC%2C+key+ASC&mode=hide">View Issues</a>
+            </p>
+        </div>
+    </div>
+    <div class="module" id="fragunresolvedissuesbyassignee">
+        <div class="mod-header">
+            <h3>Unresolved: By Assignee</h3>
+        </div>
+        <div class="mod-content">
+            <table id="assignees" class="aui">
+                <thead>
+                    <tr>
+                        <th>Assignee</th>
+                        <th style="width:15%;">Issues</th>
+                        <th style="width:30%;">Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="name first"><a id="unresolved_assignee_admin" class="user-hover" rel="admin" href="/jira/issues/?jql=project+%3D+10000+AND+resolution+%3D+Unresolved+AND+assignee+%3D+admin+ORDER+BY+priority+DESC%2C+key+ASC&mode=hide">admin</a></td>
+                        <td class="count">1</td>
+                        <td class="graph last">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="width:100%" class="colour-bar-cont" valign="center">
+                                        <div class="colour-bar"></div>
+                                    </td>
+                                    <td  style="width:0%">&nbsp;&nbsp;&nbsp;100%</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><a id="fragunresolvedissuesbyassignee_more" href="/jira/issues/?jql=project+%3D+10000+AND+resolution+%3D+Unresolved+ORDER+BY+assignee+ASC%2C+priority+DESC%2C+key+ASC&mode=hide">View Issues</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="aui-item">
+    <div class="module" id="fragstatussummary">
+        <div class="mod-header">
+            <h3>Status Summary</h3>
+        </div>
+        <div class="mod-content">
+            <table class="aui">
+                <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th style="width:15%;">Issues</th>
+                        <th style="width:30%;">Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="/jira/issues/?jql=project+%3D+DF+AND+status+%3D+%22To+Do%22+ORDER+BY+priority+DESC&mode=hide">To Do</a>
+                        </td>
+                        <td class="cell-type-collapsed">1</td>
+                        <td>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="width:100%" class="colour-bar-cont" valign="center">
+                                        <div class="colour-bar"></div>
+                                    </td>
+                                    <td  style="width:0%">&nbsp;&nbsp;&nbsp;100%</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><a id="fragstatussummary_more" href="/jira/issues/?jql=project+%3D+DF+ORDER+BY+status+DESC%2C+priority+DESC&mode=hide">View Issues</a>
+            </p>
+        </div>
+    </div>
+    <div class="module" id="fragunresolvedissuesbycomponent">
+        <div class="mod-header">
+            <h3>Unresolved: By Component</h3>
+        </div>
+        <div class="mod-content">
+            <table id="components" class="aui">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th style="width:45%;">Issues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="aui-icon jira-icon-components"></span>
+                            <a href="/jira/issues/?jql=project+%3D+10000+AND+resolution+%3D+Unresolved+AND+component+is+EMPTY+ORDER+BY+priority+DESC%2C+key+ASC&mode=hide" class="none">No Component</a>
+                        </td>
+                        <td class="cell-type-collapsed">1</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><a id="fragunresolvedissuesbycomponent_more" href="/jira/issues/?jql=project+%3D+10000+AND+resolution+%3D+Unresolved+ORDER+BY+component+ASC%2C+priority+DESC%2C+key+ASC&mode=hide">View Issues</a>
+            </p>
+        </div>
+    </div>
+    <div class="module" id="fragunresolvedissuesbyissuetype">
+        <div class="mod-header">
+            <h3>Unresolved: By Issue Type</h3>
+        </div>
+        <div class="mod-content">
+            <table id="issueTypes" class="aui">
+                <thead>
+                    <tr>
+                        <th>Issue Type</th>
+                        <th style="width:15%;">Issues</th>
+                        <th style="width:30%;">Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                         <td class="name"><img alt="Task" height="16" src="/jira/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype" title="Task - A task that needs to be done." width="16" /><a href="/jira/issues/?jql=project+%3D+10000+AND+resolution+%3D+Unresolved+AND+issuetype+%3D+Task+ORDER+BY+priority+DESC%2C+key+ASC&mode=hide">Task</a>
+                         </td>
+                        <td class="count">1</td>
+                        <td class="graph last">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="width:100%" class="colour-bar-cont" valign="center">
+                                        <div class="colour-bar"></div>
+                                    </td>
+                                    <td  style="width:0%">&nbsp;&nbsp;&nbsp;100%</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><a id="fragunresolvedissuesbyissuetype_more" href="/jira/issues/?jql=project+%3D+10000+AND+resolution+%3D+Unresolved+ORDER+BY+issuetype+ASC%2C+priority+DESC%2C+key+ASC&mode=hide">View Issues</a>
+            </p>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>

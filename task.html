@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>天元项目</title>
+	<link rel="stylesheet" type="text/css" href="css/project.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+</head>
+<body class="dashboardPage">
+	<!-- 顶部导航 -->
+	<header>
+		<div class="chen-header clearFix">
+			<div class="nav-l">
+				<a href="/" class="logo"><img src="img/logo.png" title="天元"></a>
+			</div>
+			<div class="nav-r">
+				<ul>
+					<li>
+						<form action="/" method="post">
+							<div class="form-group has-feedback">
+								<label for="search-info" class="sr-only">search</label>
+								<input type="text" name="search-info" id="search-info" class="search-info form-control" placeholder="Search...">
+								<span class="icon iconfont icon-sousuo form-control-feedback"></span>
+							</div>
+						</form>
+					</li>
+					<li>
+						 <button class="btn create-btn" data-toggle='modal' data-target="#create-issue">
+						 	<span class="icon iconfont icon-tianjiajiahaowubiankuang"></span>
+						 	快速创建
+						 </button>
+						 
+					</li>
+					<li>
+						<span class="icon iconfont icon-tongzhi message-btn" title="消息">
+							<i class="circle"></i>
+						</span>
+					</li>
+					<li>
+						<span class="icon iconfont icon-shezhi1 setting-btn" title="设置"></span>
+					</li>
+					<li>
+						<a href="/" class="user-img">
+							<img src="img/user-img.png" title="头像" width="33" height="33">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- 左侧导航 -->
+	<div class="menu">
+		<nav>
+			<ul>
+				<li>
+					<a href="/">
+						<span class="icon iconfont icon-xiangmu"></span><br>
+						项目
+					</a>
+				</li>
+				<li>
+					<a href="/">
+						<span class="icon iconfont icon-renwu"></span><br>
+						任务
+					</a>
+				</li>
+				<li>
+					<a href="/">
+						<span class="icon iconfont icon-sousuo"></span><br>
+						搜索
+					</a>
+				</li>
+				<li>
+					<a href="/">
+						<span class="icon iconfont icon-cf-c02"></span><br>
+						用户
+					</a>
+				</li>
+				<li>
+					<a href="/">
+						<span class="icon iconfont icon-shezhi1"></span><br>
+						设置
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="menu-task">
+		<nav>
+			<h1>任务</h1>
+			<ul>
+				<li><a href="#"><i class="icon iconfont icon-iconfontfolderparent-copy min-pic"></i>所有任务<i class="num">(0)</i></a></li>
+				<li><a href="#"><i class="icon iconfont icon-canyuxiangmu min-pic"></i>分配给我的<i class="num">(0)</i></a></li>
+				<li><a href="#"><i class="icon iconfont icon-wofuzehuocanyude min-pic"></i>我处理中的<i class="num">(0)</i></a></li>
+				<li><a href="#"><i class="icon iconfont icon-weiwancheng min-pic"></i>未完成的<i class="num">(0)</i></a></li>
+				<li><a href="#"><i class="icon iconfont icon-yiwancheng min-pic"></i>已完成的<i class="num">(0)</i></a></li>
+				<li><a href="#"><i class="icon iconfont icon-zuijinliulan min-pic"></i>最近浏览的<i class="num">(0)</i></a></li>
+				<li><a href="#"><i class="icon iconfont icon-gengxin min-pic"></i>最近更新的<i class="num">(0)</i></a></li>
+				<li><a href="#"><i class="icon iconfont icon-wancheng-copy min-pic"></i>最近完成的<i class="num">(0)</i></a></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- 主体内容 -->
+	<section class="content">
+		<div class="tragger taskTragger clearFix">
+			<div class="allTask">
+				<h1>所有任务(10)</h1>
+				<div class="taskList">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>类型<span class="icon iconfont icon-jiantoushang-copy order"></span></th>
+								<th>ID</th>
+								<th>标题</th>
+								<th>经办人</th>
+								<th>优先级</th>
+								<th>状态</th>
+								<th>模块</th>
+								<th>版本</th>
+								<th>迭代</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<span class="icon iconfont icon-biaoqian1 min-pic story"><i class="text">S</i></span>
+								</td>
+								<td>web</td>
+								<td>版本开发</td>
+								<td>admin</td>
+								<td>高</td>
+								<td>进行中</td>
+								<td>安全</td>
+								<td>v1.0</td>
+								<td>迭代1</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="icon iconfont icon-biaoqian1 min-pic task"><i class="text">T</i></span>
+								</td>
+								<td>web</td>
+								<td>版本开发</td>
+								<td>admin</td>
+								<td>高</td>
+								<td>进行中</td>
+								<td>安全</td>
+								<td>v1.0</td>
+								<td>迭代1</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="icon iconfont icon-biaoqian1 min-pic epic"><i class="text">E</i></span>
+								</td>
+								<td>web</td>
+								<td>版本开发</td>
+								<td>admin</td>
+								<td>高</td>
+								<td>进行中</td>
+								<td>安全</td>
+								<td>v1.0</td>
+								<td>迭代1</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 创建问题弹框 -->
+	<div class="modal fade issue-modal" id="create-issue">
+	 	<div class="modal-dialog modal-lg">
+	 		<div class="modal-content">
+	 			<div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">新建任务</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form class="form-horizontal" action="#" method="post">
+	        	<ul class="clearFix">
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='projectOwn' class="col-sm-3 control-label">所属项目<span class="min-pic">*</span></label>
+	        				<div class="col-sm-9">
+	        					<select class="form-control">
+	        						<option value="IOS11.1系统修改项目">IOS11.1系统修改项目</option>
+	        						<option value="IOS11.1系统修改项目">IOS11.1系统修改项目</option>
+	        						<option value="IOS11.1系统修改项目">IOS11.1系统修改项目</option>
+	        					</select>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issueType' class="col-sm-3 control-label">问题类型<span class="min-pic">*</span></label>
+	        				<div class="col-sm-9">
+	        					<select class="form-control">
+	        						<option value="Epic">Epic</option>
+	        						<option value="Story">Story</option>
+	        						<option value="task">task</option>
+	        					</select>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="aloneInline">
+	        			<div class="form-group clearFix">
+	        				<label for='issueTitle' class="control-label">标题<span class="min-pic">*</span></label>
+	        				<div class="sr">
+	        					<input type="text" name="issueTitle" id="issueTitle" class="form-control issueTitle" placeholder="输入标题">
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="aloneInline">
+	        			<div class="form-group clearFix">
+	        				<label for="issueDescript" class="control-label">问题描述</label>
+	        				<div class="sr">
+	        					<textarea class="form-control issueDescript" id="issueDescript" rows="7"></textarea>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issuePriority' class="col-sm-3 control-label">优先级</label>
+	        				<div class="col-sm-9">
+	        					<select class="form-control">
+	        						<option value="high">高</option>
+	        						<option value="middle">中</option>
+	        						<option value="low">低</option>
+	        					</select>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issueManage' class="col-sm-3 control-label">处理人</label>
+	        				<div class="col-sm-9">
+	        					<select class="form-control">
+	        						<option value="admin">admin</option>
+	        						<option value="chen">陈</option>
+	        						<option value="zhang">张</option>
+	        					</select>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issueEstimateTime' class="col-sm-3 control-label">预估完成时间</label>
+	        				<div class="col-sm-5">
+	        					<input type="text" name="time" id="issueEstimateTime" class="form-control issueEstimateTime">
+	        				</div>
+	        				<div class="col-sm-4 example">(例如:3w/1d/8h)</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issueTimeOver' class="col-sm-3 control-label">到期日</label>
+	        				<div class="col-sm-5">
+	        					<input type="text" name="time" id="issueTimeOver" class="form-control issueTimeOver">
+	        				</div>
+	        				<div class="col-sm-4 example">(例如:3w/1d/8h)</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issueVersion' class="col-sm-3 control-label">所属版本</label>
+	        				<div class="col-sm-9">
+	        					<select class="form-control">
+	        						<option value="v1.0">v1.0</option>
+	        						<option value="v1.1">v1.1</option>
+	        						<option value="v1.2">v1.2</option>
+	        					</select>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issueIteration' class="col-sm-3 control-label">所属迭代</label>
+	        				<div class="col-sm-9">
+	        					<select class="form-control">
+	        						<option value="迭代1">迭代1</option>
+	        						<option value="迭代2">迭代2</option>
+	        						<option value="迭代3">迭代3</option>
+	        					</select>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issueEpic' class="col-sm-3 control-label">所属Epic</label>
+	        				<div class="col-sm-9">
+	        					<select class="form-control">
+	        						<option value="Epic-1">Epic-1</option>
+	        						<option value="Epic-2">Epic-2</option>
+	        						<option value="Epic-3">Epic-3</option>
+	        					</select>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="item">
+	        			<div class="form-group">
+	        				<label for='issueLinkTask' class="col-sm-3 control-label">关联任务</label>
+	        				<div class="col-sm-9">
+	        					<select class="form-control">
+	        						<option value="任务1">任务1</option>
+	        						<option value="任务2">任务2</option>
+	        						<option value="任务3">任务3</option>
+	        					</select>
+	        				</div>
+	        			</div>
+	        		</li>
+	        		<li class="aloneInline">
+	        			<div class="form-group clearFix">
+	        				<label for='uploadFile' class="control-label">添加附件</label>
+	        				<div class="sr">
+	        					<div class="uploadFile">
+	        						<label for="uploadFile">上传附件<span class="icon iconfont icon-tianjiafujian"></span></label>
+	        						<input type="file" name="uploadFile" id="uploadFile">
+	        					</div>
+	        				</div>
+	        			</div>
+	        		</li>
+	        	</ul>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	      	<div class="checkbox">
+	      		<label>
+	      			<input type="checkbox" name="create-more">创建另一个
+	      		</label>
+	      	</div>
+	        <button type="button" class="btn btn-primary">新建</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	      </div>
+	 		</div>
+	 	</div>
+	</div>
+	<script type="text/javascript" src='http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
+	<script type="text/javascript" src='js/bootstrap.js'></script>
+</body>
+</html>
